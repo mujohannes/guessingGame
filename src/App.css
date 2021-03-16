@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+:root {
+  /* CSS HSL */
+--dim-gray: hsla(13, 4%, 42%, 1);
+--black-coffee: hsla(12, 10%, 20%, 1);
+--bittersweet: hsla(8, 100%, 67%, 1);
+--melon: hsla(10, 81%, 84%, 1);
+--magic-mint: hsla(151, 54%, 76%, 1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: var(--melon);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
 }
-
-.App-link {
-  color: #61dafb;
+#root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  background-color: var(--black-coffee);
+  padding: 1em;
+  border-radius: 1em;
+}
+h1{
+  color: var(--magic-mint);
+}
+#form {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+input[name="guess"] {
+  font-size: 3em;
+  text-align: center;
+  max-width: 6ch;
+}
+button[type="submit"] {
+  margin: 1em auto;
+  padding: 0.8em;
+  background-color: var(--bittersweet);
+  color: var(--magic-mint);
+  border: var(--melon) 2px solid;
+  border-radius: 0.8em;
+  min-width: 18ch;
+}
+.message {
+  color: var(--magic-mint);
+  text-align: center;
 }
